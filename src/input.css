@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+    --color-brand-600: #ff2400;
+    --color-brand-700: #d91e00;
+    --color-accent-500: #ff4500;
+    --color-ink: #111111;
+    --color-muted: #666666;
+    --color-surface: #ffffff;
+    --color-line: #e5e5e5;
+    --color-dark: #0a0a0a;
+
+    --font-display: "Poppins", system-ui, sans-serif;
+    --font-body: "Poppins", system-ui, sans-serif;
+
+    --radius-card: 0.875rem;
+    --radius-pill: 9999px;
+}
+
+.section {
+    @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28;
+}
+
+.btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-pill px-5 py-2.5 text-sm font-semibold transition-colors;
+}
+
+.btn-primary {
+    @apply bg-brand-600 text-ink hover:bg-brand-700;
+}
+
+.btn-secondary {
+    @apply border border-line text-ink hover:bg-surface;
+}
